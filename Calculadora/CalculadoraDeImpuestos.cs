@@ -4,10 +4,9 @@ namespace Calculadora
 {
     public class CalculadoraDeImpuestos
     {
+        const decimal porcentaje = 0.16m;
         public decimal ObtenerIVA(decimal montoReserva) {
-            const decimal porcentaje = 0.16m;
-            decimal ivaReserva = porcentaje * montoReserva;
-            return ivaReserva;
+            return porcentaje * montoReserva;
         }
     }
 }
