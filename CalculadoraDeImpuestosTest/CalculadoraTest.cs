@@ -1,3 +1,4 @@
+using Calculadora;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CalculadoraDeImpuestosTest
@@ -8,7 +9,7 @@ namespace CalculadoraDeImpuestosTest
      * Obtener el monto total de la reserva (con impuestos incluidos)
      */
     [TestClass]
-    public class UnitTest1
+    public class CalculadoraTest
     {
         [TestMethod]
         public void ImpuestosTest()
@@ -17,13 +18,13 @@ namespace CalculadoraDeImpuestosTest
             CalculadoraDeImpuestos ci = new CalculadoraDeImpuestos();
 
             //Act
-            decimal iva = ci.ObtenerIVA(1550.00);
+            decimal iva = ci.ObtenerIVA(1550.00m);
 
             //Assert
             //iva% = 16%
             //monto reserva = 1550.00
             //1550.00 * .16 = 248.00
-            Assert.AreEqual(248.00);
+            Assert.AreEqual(248.00m, iva);
         }
     }
 }
