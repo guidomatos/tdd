@@ -12,5 +12,9 @@ namespace Calculadora
         {
             return montoReserva * porcentaje;
         }
+        public decimal ObtenerMontoTotalReserva(decimal iva, decimal ish, decimal montoReserva)
+        {
+            return iva + ish + montoReserva;
+        }
     }
 }
